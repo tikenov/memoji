@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Memoji</title>
+</head>
+
+<body>
+    <div id="modal" class="modal">
+        <div class="modal-card">
+            <span id="modal-text" class="modal-text"></span>
+            <div id="modal-button" class="modal-button"></div>
+        </div>
+    </div>
+    <header>Memoji</header>
+    <div id="card-area" class="card-area"></div>
+    <div id="timer" class="timer">00:00</div>
+    <script src="script.js"></script>
+    <script>
+        new Game({
+            area: 'card-area',
+            card: 'card',
+            timer: 'timer',
+            modal: 'modal',
+            modalText: 'modal-text',
+            modalButton: 'modal-button',
+            cardCorrect: 'green',
+            cardIncorrect: 'red',
+            emoji: ['🐶', '🐻', '🐼', '🐯', '🦁', '🐵']
+        }).start();
+    </script>
+</body>
+
+</html>
